@@ -35,7 +35,6 @@
                                 <state key="normal" image="stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yin-rM-ItH"/>
-                                    <segue destination="17H-Fh-dVA" kind="show" id="4wC-gb-6rP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,6 +53,7 @@
                         <outlet property="recordButton" destination="XCd-gi-q7V" id="TJ4-br-pcI"/>
                         <outlet property="recordingLabel" destination="yMz-bk-M0h" id="KqK-Fw-iDy"/>
                         <outlet property="stopRecordingButton" destination="9fc-1a-F2d" id="Y6D-dK-J6Y"/>
+                        <segue destination="17H-Fh-dVA" kind="show" identifier="stopRecording" id="Moi-cO-eda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
