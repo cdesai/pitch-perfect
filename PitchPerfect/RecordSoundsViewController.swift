@@ -62,6 +62,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         print("Audio has been recorded.")
+        if flag {
+            self.performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
+        } else {
+            print("There was a problem saving the recorded Audio.")
+        }
     }
     override func viewWillAppear(animated: Bool) {
         print("View will appear called.")
