@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     // MARK: Outlets
@@ -20,6 +21,19 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     
     var recordedAudioURL: NSURL!
+    var audioFile: AVAudioFile!
+    var audioEngine: AVAudioEngine!
+    var audioPlayerNode: AVAudioPlayerNode!
+    var stopTimer: NSTimer!
+    
+    enum ButtonType: Int {
+        case Slow = 0,
+        Fast,
+        Chipmunk,
+        Vader,
+        Echo,
+        Reverb }
+    
 
     // MARK: Actions
     
@@ -33,10 +47,14 @@ class PlaySoundsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAudio()
         // Do any additional setup after loading the view.
+        stopButton.enabled = false
     }
 
+    override func viewWillAppear(animated: Bool) {
+        configureUI(.NotPlaying)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
