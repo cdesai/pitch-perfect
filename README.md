@@ -16,4 +16,5 @@ This app demonstrates use of following iOS components:
 
 **Screenshots**
 
-
+<img src="https://github.com/cdesai/pitch-perfect/blob/master/pitch-perfect-screen-1.png" width="350" alt="Pitch Perfect - Record Audio Screen">
+<img src="https://github.com/cdesai/pitch-perfect/blob/master/pitch-perfect-screen-2.png" width="350" alt="Pitch Perfect - Apply Audio Effect">
