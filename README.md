@@ -1,5 +1,5 @@
 # pitch-perfect
-PitchPerfect is a sample app created in the first module of the course for iOS Development by Udacity.
+PitchPerfect is a sample app created to explore AVFoundation for recording and modifying Audio
 
 **Compatibility:**
 
